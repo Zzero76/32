@@ -13,7 +13,7 @@ where ucxxxxx is your UCL username.
 
 In your home directory on Aristotle, clone the tutorial GitHub repository through: 
 
-`git clone https://github.com/UCL-DDMD/ASE-Tutorials/assessement.git`
+`git clone [https://github.com/UCL-DDMD/ASE-Tutorials/assessement.git](https://github.com/UCL-DDMD/ASE-assignment.git)`
 
 To transfer files between your local machine and Aristotle run:
 
