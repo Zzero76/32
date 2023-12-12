@@ -19,6 +19,11 @@ To transfer files between your local machine and Aristotle run:
 
 `scp -r ucxxxxx@aristotle.rc.ucl.ac.uk:path/to/your/file Desktop`
 
+To run your Python scripts, simply run in the command line: 
+
+`bash submission.script`
+
+
 In this directory, you have a submission script for submitting jobs on Aristotle, Python scripts for running a geometry optimisaiton,
 band structure, DOS calculation, and pseudopotentials. Instructions on how to complete and submit the assignment are in the NSCI0032: Integrated Data-Driven Materials Science and Digitalisation 23/24
 page on Moodle. 
