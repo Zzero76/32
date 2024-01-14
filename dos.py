@@ -5,9 +5,9 @@ from ase.io import read
 
 
 # Load structure
-si = read('Opt.traj@-1')
+P = read('Opt.traj@-1')
 
-pseudopotentials = {'Si': 'Si.pbe-n-rrkjus_psl.1.0.0.UPF'}
+pseudopotentials = {'p': 'P.pbe-n-rrkjus_psl.1.0.0.UPF'}
 
 input_data = {
     'control': {
@@ -34,10 +34,10 @@ calc = Espresso(pseudopotentials=pseudopotentials,
                 tstress=True, tprnfor=True, kpts=(12, 12, 12), input_data=input_data)
 
 # Attach the calculator to the Silicon atoms
-si.calc = calc
+P.calc = calc
 
 # Perform SCF calculation
-si.get_potential_energy()
+P.get_potential_energy()
 
 # Calculate DOS
 dos = DOS(calc, width=0.2)
@@ -53,7 +53,7 @@ plt.figure(figsize=(8, 6))
 plt.plot(energies, dos_values, color='red')
 plt.xlabel('Energy (eV)')
 plt.ylabel('Density of States')
-plt.title('Electronic DOS of Silicon')
+plt.title('Electronic DOS of P')
 
 # Plot Fermi level line at 0 energy
 fermi_level = calc.get_fermi_level()
