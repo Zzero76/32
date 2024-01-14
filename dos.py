@@ -13,7 +13,7 @@ input_data = {
     'control': {
         'calculation': 'scf',
         'restart_mode': 'from_scratch',
-        'prefix': 'si_scf',
+        'prefix': 'P_scf',
         'outdir': './',
     },
     'system': {
