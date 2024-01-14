@@ -4,8 +4,10 @@ from ase.optimize.bfgs import BFGS
 from ase.constraints import ExpCellFilter
 
 # Create a Silicon unit cell
-a = 5.43  # lattice constant for Silicon in Angstrom
-si = bulk('Si', 'diamond', a=a)
+a = 3.31  # lattice constant for Silicon in Angstrom
+b = 10.36
+c = 4.33
+P = bulk('P', 'diamond', a=a , b=b , c=c)
 
 # Create supercell
 
@@ -13,7 +15,7 @@ supercell_size = [[2, 0, 0], [0, 2, 0], [0, 0, 2]]  # Define the size of the sup
 supercell = make_supercell(si, supercell_size)
 
 
-pseudopotentials = {'Si': 'Si.pbe-n-rrkjus_psl.1.0.0.UPF'}  # Add Phosphorus pseudopotential
+pseudopotentials = {'P': 'P.pbe-n-rrkjus_psl.1.0.0.UPF'}  # Add Phosphorus pseudopotential
 
 input_data = {
     'control': {
